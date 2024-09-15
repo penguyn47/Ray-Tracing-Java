@@ -11,6 +11,9 @@ public class RayTracingPanel extends JPanel {
     private int height;
     private int width;
 
+    public World world;
+    public Player player;
+
     public RayTracingPanel(
         int xOffSet,
         int yOffSet,
@@ -23,6 +26,9 @@ public class RayTracingPanel extends JPanel {
         this.pixelSize = pixelSize;
         this.height = height;
         this.width = width;
+
+        world = new World(20, 20, 20);
+        player = new Player(10, 10, 10);
     }
 
     @Override
